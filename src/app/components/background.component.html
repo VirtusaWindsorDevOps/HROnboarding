@@ -1,0 +1,26 @@
+<!--<nav></nav>-->
+<div *ngFor="let emp of employees">
+<div *ngFor="let bg of background">
+    <div *ngIf="emp.Employee.IDCard.ID == bg.Employee.ID">
+    <h3>{{emp.Employee.IDCard.LastName}}, {{emp.Employee.IDCard.FirstName}}</h3>
+    <hr />
+    <h3>Background Check Information</h3>
+    <p>
+        <strong>ID:</strong> {{bg.Employee.ID}}<br>
+        <strong>Status:</strong> {{bg.Employee.Status}}<br>
+        <strong>Citizenship:</strong> {{bg.Employee.Citizenship}}<br>
+    </p>
+    <hr />
+    <h3>Virtusa Background Check</h3>
+    <p>
+        <strong>Status:</strong> {{bg.VirtusaCheck.Status}}<br>
+    </p>
+    <hr />
+    <h3>Pratt Background Check</h3>
+    <p>
+        <strong>Status:</strong> {{bg.PrattCheck.Status}}<br>
+    </p>
+    <hr /><hr />
+    </div>
+  </div>
+</div>

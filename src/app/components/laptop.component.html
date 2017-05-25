@@ -1,0 +1,13 @@
+<!--<nav></nav>-->
+  <div *ngFor="let emp of employees">
+      <hr />
+    <h3>{{emp.Employee.IDCard.LastName}}, {{emp.Employee.IDCard.FirstName}}</h3>
+    <hr />
+    <h3>Laptop Information</h3>
+    <p>
+        <strong>Model:</strong> {{emp.Employee.Laptop.Model}}<br> 
+        <strong>Brand:</strong> {{emp.Employee.Laptop.Brand}}<br>
+        <strong>Labptop Id:</strong> {{emp.Employee.Laptop.LaptopID}}<br>
+        <strong>Tracking Number:</strong> {{emp.Employee.Laptop.TrackingNumber}}<br>
+    </p>
+  </div>
