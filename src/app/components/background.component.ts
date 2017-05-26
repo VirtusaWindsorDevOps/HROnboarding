@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
 import {PostsService} from '../Services/posts.service';
+import {employees} from '../models/employees.model';
+import {background} from '../models/background.model';
+import {NavbarComponent} from './navbar.component';
 
 @Component({
     moduleId: module.id,
     selector: 'background',
     templateUrl:'background.component.html',
+    styleUrls: ['./navbar.component.css'],
     providers: [PostsService]
+   
 })
 export class BackgroundComponent  { 
-  background: Background[];
-  employees: Employees;
+  background: background[];
+  employees: employees;
 
   constructor(private postsService: PostsService){
 
@@ -22,35 +27,4 @@ export class BackgroundComponent  {
  }
 }
 
-interface Employees{
-    Employee: Employee[];
-}
-
- interface Employee{
-     IDCard: IdCard;
- }
-
- interface IdCard{
-    FirstName: string;
-    LastName: string;
- }
-
- interface Background{
-     Employee: Info;
-     VirtusaCheck: Vcheck;
-     PrattCheck: Pcheck;
- }
-
- interface Info{
-    ID: number;
-    Status: string;
-    Citizenship: string;
- }
-
- interface Vcheck{
-    Status: string;
- }
-
- interface Pcheck{
-    Status: string;
- }
+ 

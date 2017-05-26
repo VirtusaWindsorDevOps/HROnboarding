@@ -1,4 +1,7 @@
-<!--<nav></nav> -->
+<navbar></navbar>
+<div id="outside">
+  <h1>Employee</h1> 
+  <hr />
   <div *ngFor="let emp of employees" let i = index>
       <hr />
     <h3>{{emp.Employee.IDCard.LastName}}, {{emp.Employee.IDCard.FirstName}}</h3>
@@ -11,4 +14,5 @@
         <strong>Citizenship:</strong> {{emp.Employee.IDCard.Citizenship}}<br>
         <strong>Work Location:</strong> {{emp.Employee.IDCard.WorkLocation}}<br>
     </p>
+  </div>
   </div>

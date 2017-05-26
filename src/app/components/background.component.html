@@ -1,4 +1,7 @@
-<!--<nav></nav>-->
+<navbar></navbar>
+<div id="outside">
+  <h1>Employee</h1> 
+  <hr />
 <div *ngFor="let emp of employees">
 <div *ngFor="let bg of background">
     <div *ngIf="emp.Employee.IDCard.ID == bg.Employee.ID">
@@ -23,4 +26,5 @@
     <hr /><hr />
     </div>
   </div>
+</div>
 </div>

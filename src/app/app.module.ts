@@ -12,7 +12,7 @@ import {routing} from './app.routing';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, routing ],
-  declarations: [ AppComponent, UserComponent, LaptopComponent, BackgroundComponent, NavbarComponent ],
+  declarations: [ NavbarComponent, AppComponent, UserComponent, LaptopComponent, BackgroundComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

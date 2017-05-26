@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import {PostsService} from '../Services/posts.service';
+import {employees} from '../models/employees.model';
 
 @Component({
     moduleId: module.id,
     selector: 'laptop',
     templateUrl: 'laptop.component.html',
+    styleUrls: ['navbar.component.css'],
     providers: [PostsService]
 })
 export class LaptopComponent  { 
-  employees: Employees;
+  employees: employees;
 
   constructor(private postsService: PostsService){
 
@@ -16,29 +18,3 @@ export class LaptopComponent  {
   );
  }
 }
-
-interface Employees{
-    Employee: Employee[];
-}
-
- interface Employee{
-     IDCard: IdCard;
-     Laptop: Laptop;
- }
-
- interface IdCard{
-    ID: number;
-    FirstName: string;
-    LastName: string;
-    Status: string;
-    Role: string;
-    Citizenship: string;
-    WorkLocation: string;
- }
-
- interface Laptop{
-    Model: string;
-    Brand: string;
-    LaptopID: string;
-    TrackingNumber: string;
- }

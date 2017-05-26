@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     moduleId: module.id,
-    selector: 'nav',
+    selector: 'navbar',
     templateUrl:'navbar.component.html',
 })
 export class NavbarComponent{

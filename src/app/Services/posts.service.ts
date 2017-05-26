@@ -1,16 +1,16 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import {Http, Response} from '@angular/http';
+import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
+import {employees} from '../models/employees.model';
 
 @Injectable()
 export class PostsService {
-    constructor(private http: Http){
-        console.log("PostsService Initialized...");
-    }
+    constructor(private http: Http){}
 
-    getPosts(){
+    getPosts(): Observable<any>{
         return this.http.get('http://52.14.104.9:9000/')
-        .map(res => res.json());
+        .map((res: Response) => <employees>res.json());
     }
 
     getBG(){
