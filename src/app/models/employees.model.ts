@@ -1,14 +1,8 @@
-export class employees{
-    employees: Employees;
-
-    
+export interface EmployeeList{
+    Employee: EmployeeObj[];
 }
 
-interface Employees{
-    Employee: Employee[];
-}
-
- interface Employee{
+ interface EmployeeObj{
      IDCard: IdCard;
      Laptop: Laptop;
  }

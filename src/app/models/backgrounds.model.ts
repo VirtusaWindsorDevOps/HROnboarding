@@ -1,7 +1,7 @@
-export class background{
-    background: Background[];
+export interface BackgroundList{
+    BackGround : BackGroundObj[];
 }
-interface Background{
+interface BackGroundObj{
      Employee: Info;
      VirtusaCheck: Vcheck;
      PrattCheck: Pcheck;

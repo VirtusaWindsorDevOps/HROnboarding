@@ -1,27 +1,25 @@
 <navbar></navbar>
 <div id="outside">
-  <h1>Employee</h1> 
-  <hr />
 <div *ngFor="let emp of employees">
-<div *ngFor="let bg of background">
-    <div *ngIf="emp.Employee.IDCard.ID == bg.Employee.ID">
+<div *ngFor="let bg of backgrounds">
+    <div *ngIf="emp.Employee.IDCard.ID == bg.BackGround.Employee.ID">
     <h3>{{emp.Employee.IDCard.LastName}}, {{emp.Employee.IDCard.FirstName}}</h3>
     <hr />
     <h3>Background Check Information</h3>
     <p>
-        <strong>ID:</strong> {{bg.Employee.ID}}<br>
-        <strong>Status:</strong> {{bg.Employee.Status}}<br>
-        <strong>Citizenship:</strong> {{bg.Employee.Citizenship}}<br>
+        <strong>ID:</strong> {{bg.BackGround.Employee.ID}}<br>
+        <strong>Status:</strong> {{bg.BackGround.Employee.Status}}<br>
+        <strong>Citizenship:</strong> {{bg.BackGround.Employee.Citizenship}}<br>
     </p>
     <hr />
     <h3>Virtusa Background Check</h3>
     <p>
-        <strong>Status:</strong> {{bg.VirtusaCheck.Status}}<br>
+        <strong>Status:</strong> {{bg.BackGround.VirtusaCheck.Status}}<br>
     </p>
     <hr />
     <h3>Pratt Background Check</h3>
     <p>
-        <strong>Status:</strong> {{bg.PrattCheck.Status}}<br>
+        <strong>Status:</strong> {{bg.BackGround.PrattCheck.Status}}<br>
     </p>
     <hr /><hr />
     </div>

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {PostsService} from '../Services/posts.service';
-import {employees} from '../models/employees.model';
-import {background} from '../models/background.model';
+import {BackgroundService} from '../Services/backgrounds.service';
+import {EmployeeList} from '../models/employees.model';
+import {BackgroundList} from '../models/backgrounds.model';
 import {NavbarComponent} from './navbar.component';
 
 @Component({
@@ -9,21 +10,21 @@ import {NavbarComponent} from './navbar.component';
     selector: 'background',
     templateUrl:'background.component.html',
     styleUrls: ['./navbar.component.css'],
-    providers: [PostsService]
+    providers: [PostsService, BackgroundService]
    
 })
-export class BackgroundComponent  { 
-  background: background[];
-  employees: employees;
+export class BackgroundComponent  {
+  employees: EmployeeList; 
+  backgrounds: BackgroundList;
 
-  constructor(private postsService: PostsService){
+  constructor(private postsService: PostsService, private bgService: BackgroundService){
 
-    this.postsService.getPosts().subscribe(employees => this.employees = employees.Employees
+    this.postsService.getPosts().subscribe(employees => this.employees = employees
   );
 
-  this.postsService.getBG().subscribe(background => {
-      this.background = [background.BackGround];
-  });
+    this.bgService.getBG().subscribe(backgrounds => this.backgrounds = backgrounds
+  );
+  
  }
 }
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {PostsService} from '../Services/posts.service';
-import {employees} from '../models/employees.model';
+import {EmployeeList} from '../models/employees.model';
+import {NavbarComponent} from './navbar.component';
 
 @Component({
     moduleId: module.id,
@@ -10,11 +11,11 @@ import {employees} from '../models/employees.model';
     providers: [PostsService]
 })
 export class LaptopComponent  { 
-  employees: employees;
+  employees: EmployeeList;
 
   constructor(private postsService: PostsService){
 
-   this.postsService.getPosts().subscribe(employees => this.employees = employees.Employees
+   this.postsService.getPosts().subscribe(employees => this.employees = employees
   );
  }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {PostsService} from '../Services/posts.service';
-import {employees} from '../models/employees.model';
+import {EmployeeList} from '../models/employees.model';
 import {NavbarComponent} from './navbar.component';
 
 @Component({
@@ -11,11 +11,11 @@ import {NavbarComponent} from './navbar.component';
     providers: [PostsService]
 })
 export class UserComponent  { 
- employees: employees;
+ employees: EmployeeList;
 
   constructor(private postsService: PostsService){
 
-   this.postsService.getPosts().subscribe(employees => this.employees = employees.Employees
+   this.postsService.getPosts().subscribe(employees => this.employees = employees
   );
  }
 }
