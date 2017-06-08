@@ -9,12 +9,16 @@ import {LaptopComponent} from './components/laptop.component';
 import {BackgroundComponent} from './components/background.component';
 import {NavbarComponent} from './components/navbar.component';
 import {EmpReceiveComponent} from './components/empReceive.component';
+import {EmpLaptopComponent} from './components/empLaptop.component';
+import {EmpBackgroundComponent} from './components/empBackground.component';
+import {EmpNavbarComponent} from './components/empNavbar.component';
+import {ScreenComponent} from './components/screen.component';
 import {routing} from './app.routing';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, routing ],
-  exports:      [ NavbarComponent, EmployeeComponent, UserComponent, LaptopComponent, BackgroundComponent, EmpReceiveComponent ],
-  declarations: [ NavbarComponent, EmployeeComponent, UserComponent, LaptopComponent, BackgroundComponent, EmpReceiveComponent ],
+  exports:      [ NavbarComponent, EmployeeComponent, UserComponent, LaptopComponent, BackgroundComponent, EmpReceiveComponent, ScreenComponent, EmpLaptopComponent,EmpBackgroundComponent,EmpNavbarComponent ],
+  declarations: [ NavbarComponent, EmployeeComponent, UserComponent, LaptopComponent, BackgroundComponent, EmpReceiveComponent, ScreenComponent, EmpLaptopComponent,EmpBackgroundComponent,EmpNavbarComponent ],
   bootstrap:    [ EmployeeComponent ]
 })
 export class EmployeeModule { }

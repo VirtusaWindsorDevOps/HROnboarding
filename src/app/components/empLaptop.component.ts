@@ -8,12 +8,12 @@ import {EmpNavbarComponent} from './empNavbar.component';
 
 @Component({
     moduleId: module.id,
-    selector: 'emp',
+    selector: 'empLap',
     providers: [PostsService],
-    templateUrl: 'empReceive.component.html',
+    templateUrl: 'empLaptop.component.html',
     styleUrls: ['./navbar.component.css']
 })
-export class EmpReceiveComponent{
+export class EmpLaptopComponent{
 
     employee: EmployeeListAlt = null;
     private displayId: number = this.ngOnInit();

@@ -13,12 +13,21 @@ export class PostsService {
         return this.http.get('http://52.14.104.9:9000/')
         .map((res: Response) => {
             let empJson = res.json();
+            console.log(empJson);
             return empJson.Employees;
         });
     }
 
     getOneEmployee(id:number): Observable<any>{
         return this.http.get('http://localhost:3000/Employees?Employee.IDCard.ID='+id)
+        .map((res: Response) => {
+            let singleJson = res.json();
+            return singleJson;
+        });
+    }
+
+    getOneBackground(id:number): Observable<any>{
+        return this.http.get('http://localhost:3000/BackGrounds?BackGround.Employee.ID='+id)
         .map((res: Response) => {
             let singleJson = res.json();
             return singleJson;

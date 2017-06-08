@@ -3,25 +3,26 @@ import {Response} from '@angular/http';
 import { ActivatedRoute, Params} from '@angular/router';
 import {PostsService} from '../Services/posts.service';
 import {Observable} from 'rxjs/Rx';
-import {EmployeeListAlt} from '../models/altEmployees.model';
+import {BackgroundListAlt} from '../models/altBackgrounds.model';
 import {EmpNavbarComponent} from './empNavbar.component';
 
 @Component({
     moduleId: module.id,
-    selector: 'emp',
+    selector: 'empBG',
     providers: [PostsService],
-    templateUrl: 'empReceive.component.html',
+    templateUrl: 'empBackground.component.html',
     styleUrls: ['./navbar.component.css']
 })
-export class EmpReceiveComponent{
+export class EmpBackgroundComponent{
 
-    employee: EmployeeListAlt = null;
+    background: BackgroundListAlt = null;
     private displayId: number = this.ngOnInit();
 
     constructor(private route: ActivatedRoute, private postsService: PostsService){
-        this.postsService.getOneEmployee(this.displayId).subscribe(employee => {
-            console.log(employee);
-            this.employee = employee[0];
+        this.postsService.getOneBackground(this.displayId).subscribe(background => {
+            console.log(";lakbv;vabnvrau");
+            console.log(background[0]);
+            this.background = background[0];
         });
     }
 
