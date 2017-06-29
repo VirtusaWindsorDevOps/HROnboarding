@@ -1,0 +1,94 @@
+md-grid-tile {
+  background:transparent;
+}
+
+.profile-name{
+    text-align: center;
+}
+
+.profile-title{
+    text-align: center;
+    color: gray;
+}
+
+.spacer{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.left-card-spacer{
+
+   display:inline-block;
+
+}
+
+
+.right-card-spacer{
+
+   display: inline-block;
+   float: right;
+
+}
+
+
+.moveContents{   
+    position: relative;
+    overflow: hidden;
+    animation: msMoveContent 400ms;
+    animation-fill-mode: forwards;
+}
+
+.moveContentsReverse{
+    position: relative;
+    overflow: hidden;
+    animation: msMoveContent 400ms;
+    animation-fill-mode: forwards;
+
+}
+
+/*  This is used to animate the milestones selection window. */
+@keyframes msMoveContent {
+    from {left: -1200px;}
+    to {left: 0px;}
+}
+
+/*  This is used to animate the milestones selection window. */
+@keyframes mymove {
+    from {left: -1200px;}
+    to {left: 0px;}
+}
+
+#header-style{
+  background-color: gray;
+  background-size: 500px, cover;
+  background-position: 50%, 0 0;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+#progress-bar-container{
+    width: 850px;
+    height: auto;
+    margin: 0 auto;
+    padding: 35px;
+    position: relative;
+}
+
+#user-content-container{
+    width: 850px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    background:white;
+}
+
+#ms-toolbar-container{
+    width: 800px;
+    height: auto;
+    position: relative;
+
+}
+
+
+

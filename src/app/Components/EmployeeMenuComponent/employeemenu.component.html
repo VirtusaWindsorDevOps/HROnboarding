@@ -1,0 +1,148 @@
+<div class="container">
+  <div class="header-style">
+  <md-grid-list cols="8" rows="2" rowHeight="100px">
+    <!--  Grid Item 1  -->
+    <md-grid-tile [colspan]="1" [rowspan]="2">
+      <!--  This space is deliberately left empty  -->
+    </md-grid-tile>
+  
+    <!--  Grid Item 2  -->
+    <md-grid-tile [colspan]="6" [rowspan]="2">
+      <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />     
+    </md-grid-tile>
+    
+    <!--  Grid Item 3  -->  
+    <md-grid-tile [colspan]="1" [rowspan]="2">
+      <!--  This space is used to house the buttons  -->
+      <div class="icon-align" >
+        <div> <md-icon class="material-icons md-36">chat bubble outline</md-icon> </div>
+        <br>
+        <div> <md-icon class="material-icons md-36">email outline</md-icon> </div>
+        <br>
+        <div> <md-icon class="material-icons md-36">phone</md-icon> </div>
+      </div>
+    </md-grid-tile>
+  </md-grid-list>
+
+  <!-- ********************************************** -->
+
+  <md-grid-list cols="8" rows="1" rowHeight="60px">
+    <!--  Grid Item 1  -->
+    <md-grid-tile [colspan]="1" >
+       <!--  Intentionally left empty  -->  
+    </md-grid-tile>
+    
+    <!--  Grid Item 2  -->
+    <md-grid-tile [colspan]="6">
+        <!--  A name variable from the .ts file should be used here...  -->
+        <div layout-wrap>
+          <h4 class="profile-name"> Jaina Brehm </h4> 
+          <h5 class="profile-title"> Software Developer </h5> 
+        </div>
+    </md-grid-tile>
+
+    <!--  Grid Item 3  -->
+    <md-grid-tile [colspan]="1" >
+        <!--  Intentionally left empty  -->   
+    </md-grid-tile>
+  </md-grid-list>
+
+  <!-- ********************************************** -->
+
+  <!--  This is the grid list for the progress bar  -->
+  <md-grid-list cols="8" rows="1" rowHeight="50px">
+        <md-grid-tile [colspan]="1" [rowspan]="1">
+       <!--  Intentionally left empty  -->  
+    </md-grid-tile>
+
+    <md-grid-tile [colspan]="6" [rowspan]="1">
+       <!--  This is the milestone/task progress bar  -->
+      <div id="progress-bar-container">
+        <md-progress-bar mode="determinate" value="64"></md-progress-bar>
+      </div>
+    </md-grid-tile>
+
+    <md-grid-tile [colspan]="1" [rowspan]="1">
+        <!--  Intentionally left empty  -->   
+    </md-grid-tile>
+  
+  </md-grid-list>
+  </div>
+  <!-- ********************************************** -->
+
+  <!--  This is the application content div  -->
+  <div class="container">
+    <md-tab-group style="align: center;">
+      <md-tab>
+        <ng-template md-tab-label>
+          <i class="material-icons">linear_scale</i>
+          Milestones
+        </ng-template>
+        
+        <div *ngIf="msState" class="{{styleSelection}}">
+          <!--  md-card repeater  -->
+          <md-card  *ngFor="let card of cardArr; index as i;" (click)="onSelect(i)">
+            <div *ngFor="let contentItem of card.milestoneContent">
+              <div class="left-card-spacer">
+                <h5>{{contentItem.msName}}</h5>
+                <p>Completed {{contentItem.completedOn}}, by {{contentItem.completedBy}}</p>    
+              </div>
+              <div class="right-card-spacer">
+                <i class="material-icons">keyboard_arrow_right</i>
+              </div>
+            </div>
+          </md-card>
+        </div>
+
+        <md-card *ngIf="state"  class="moveContents" style="background:lightgray;">
+          <md-toolbar>
+            <i class="material-icons md-36" (click)="onUnselect()">keyboard_arrow_left</i>
+          </md-toolbar>
+          <div>
+            <p>{{contentLoader[0].fieldOne}} : {{contentLoader[0].contentOne}}</p>
+            <p>{{contentLoader[0].fieldTwo}} : {{contentLoader[0].contentTwo}}</p>
+            <p>{{contentLoader[0].fieldThree}} : {{contentLoader[0].contentThree}}</p>
+            <p>{{contentLoader[0].fieldFour}} : {{contentLoader[0].contentFour}}</p>
+            <p>{{contentLoader[0].fieldFive}} : {{contentLoader[0].contentFive}}</p>
+          </div>
+        </md-card>        
+
+
+       
+
+      </md-tab>
+
+      <md-tab>
+        <ng-template md-tab-label>
+                      
+          <i class="material-icons">today</i>
+          Calendar
+        </ng-template>
+                  
+        <p>This is where the calander will go...</p>
+
+      </md-tab>
+
+      <md-tab>
+        <ng-template md-tab-label>
+          <i class="material-icons">settings</i> 
+          Settings
+        </ng-template>
+        <p>This is where the Settings will go...</p>
+              
+      </md-tab>
+
+    </md-tab-group>
+  </div>
+
+  <!--  This is test Test Grid list  -->
+  <!--
+  <md-grid-list cols="8" rowHeight="25px">
+    <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+      {{tile.text}}
+    </md-grid-tile>
+  </md-grid-list>
+  -->
+
+</div>
+
