@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Response} from '@angular/http';
 import { ActivatedRoute, Params} from '@angular/router';
 import {PostsService} from '../Services/posts.service';

@@ -8,7 +8,7 @@ import {EmployeeListAlt} from '../models/altEmployees.model';
 @Component({
     moduleId: module.id,
     selector: 'screen',
-    template: '',
+    template: '<emp [employee]=employee[0]></emp>',
     providers: [PostsService],
 })
 export class ScreenComponent{

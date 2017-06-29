@@ -14,9 +14,9 @@
         <div class="collapse navbar-collapse"
           [ngClass]="{ 'in': isIn }">
           <ul class="nav navbar-nav">
-             <li><a href="/employee/2">Home</a></li>
-              <li><a href="/empLaptop/2">Laptop</a></li>
-              <li><a href="/empBackground/2">Background</a></li>
+             <li><a id="eLink" href="/employee/"+{{employee.Employee.IDCard.ID}}>Home</a></li>
+              <li><a id="lLink" href="/empLaptop/2"{{employee.Employee.IDCard.ID}}>Laptop</a></li>
+              <li><a id="bgLink" href="/empBackground/2"{{employee.Employee.IDCard.ID}}>Background</a></li>
           </ul>
         </div> <!-- #2 -->
     </div>
